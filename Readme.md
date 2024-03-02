@@ -17,7 +17,7 @@ This project showcases key React concepts using React components and CSS styling
 
 ## Preview
 
-![Image](.\src\assets\images\preview.png)
+![Image](./src/assets/images/preview.png)
 
 ## Installation
 
