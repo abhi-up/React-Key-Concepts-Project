@@ -1,19 +1,25 @@
+/* Import the Quicksand font from Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap");
 
+/* Apply box-sizing border-box to all elements */
 * {
     box-sizing: border-box;
 }
 
+/* Body styles */
 body {
     margin: 0;
+    /* Set the font family to Quicksand and ensure smooth font rendering */
     font-family: "Quicksand", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    /* background-color: #2d2834; */
+    /* Background gradient */
     background: radial-gradient(#27212e, #221530);
+    /* Text color */
     color: #d9c9ee;
 }
 
+/* Header styles */
 header {
     padding: 2rem;
     display: flex;
@@ -24,19 +30,23 @@ header {
     text-align: center;
 }
 
+/* Header image styles */
 header img {
     width: 7rem;
 }
 
+/* Header heading styles */
 header h1 {
     margin: 0;
     font-size: 1.5rem;
 }
 
+/* Header paragraph styles */
 header p {
     margin: 0;
 }
 
+/* Concepts list styles */
 #concepts {
     max-width: 50rem;
     margin: 2rem auto;
@@ -45,38 +55,46 @@ header p {
     gap: 1.5rem;
 }
 
+/* Individual concept item styles */
 .concept {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     gap: 1rem;
+    /* Gradient background */
     background: linear-gradient(#250358, #440c66);
     padding: 1.5rem;
     border-radius: 6px;
+    /* Box shadow for depth */
     box-shadow: 0 2px 20px rgba(234, 78, 240, 0.2);
     width: 33%;
+    /* Transition for smooth hover effect */
     transition: all 0.2s;
 }
 
+/* Hover effect on concept item */
 .concept:hover {
     transform: translateY(-2px);
     transition: transform 0.2s;
     box-shadow: 0 2px 30px rgba(234, 78, 240, 0.4);
 }
 
+/* Concept image styles */
 .concept img {
     width: 6rem;
     height: 5rem;
     object-fit: contain;
 }
 
+/* Concept title styles */
 .concept h2 {
     margin: 0;
     font-size: 1rem;
     text-transform: uppercase;
 }
 
+/* Concept description styles */
 .concept p {
     margin: 0;
     text-align: center;

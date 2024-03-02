@@ -1,8 +1,14 @@
-import keyConceptsImage from "./assets/images/key-concepts.png"
+// Import images for each concept
 import componentsImage from "./assets/images/components.png"
 import stateImage from "./assets/images/state.png"
 import eventsImage from "./assets/images/events.png"
 
+// Import the Header component
+import Header from "./components/Header"
+// Import the Concept component
+import { Concept } from "./components/Concept"
+
+// Array containing information about different concepts
 const concepts = [
     {
         title: "Components",
@@ -24,33 +30,27 @@ const concepts = [
     },
 ]
 
+// App component
 function App() {
     return (
+        // Main container for the app
         <div>
-            <header>
-                <img src={keyConceptsImage} alt="Medal badge with a star" />
-                <h1>Key React Concepts</h1>
-                <p>Selected key React concepts you should know about</p>
-            </header>
+            {/* Render the Header component */}
+            <Header />
+            {/* Render a list of Concept components */}
             <ul id="concepts">
-                <li className="concept">
-                    <img src={concepts[0].image} alt={concepts[0].title} />
-                    <h2>{concepts[0].title}</h2>
-                    <p>{concepts[0].description}</p>
-                </li>
-                <li className="concept">
-                    <img src={concepts[1].image} alt={concepts[1].title} />
-                    <h2>{concepts[1].title}</h2>
-                    <p>{concepts[1].description}</p>
-                </li>
-                <li className="concept">
-                    <img src={concepts[2].image} alt={concepts[2].title} />
-                    <h2>{concepts[2].title}</h2>
-                    <p>{concepts[2].description}</p>
-                </li>
+                {/* Map over the concepts array and create a Concept component for each */}
+                {concepts.map((item) => (
+                    <Concept
+                        title={item.title}
+                        image={item.image}
+                        description={item.description}
+                    />
+                ))}
             </ul>
         </div>
     )
 }
 
+// Export the App component
 export default App
